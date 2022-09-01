@@ -4,18 +4,29 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <meta name="keyword" content="Gerador de senha, new password">
+        <title>Gerando Senha</title>
+        <link rel="stylesheet" href="/css/estilo.css">
+        <script src="/js/script.js"></script>
     </head>
 
     <body>
+        <img src="/img/logo.png" alt="Gerador de senha logo">
+        
+        <main class="container-input">
+            <span>Tamanho
+                <span id="valor"> </span>caracteres
+            </span>
+            <input type="range" id="slider" class="slider" max="20" min="4">
 
-        <div>
-            <h1>Olá mundo</h1>
-            <p>Projeto com ReactJs</p>
-        </div>
+            <button id="button" class="button-cta" onclick="gerandoSenha()">Gerar Senha</button>
+        </main>
 
-        <div>
-            <p>Começando projeto...</p>
+        <div id="container-password" class="container-password hide">
+            <span class="title">Sua senha foi gerada</span>
+            <span class="password" id="password"></span>
+            <span class="tooltip">Clique na senha para copiar 👆</span>
         </div>
+        
     </body>
 </html>
